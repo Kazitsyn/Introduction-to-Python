@@ -9,3 +9,17 @@
 #     6
 #     -> 5
 
+N = int(input('Введите целое число равное длине массива: '))
+A = []
+while N > 0:
+    A.append(N)
+    N -= 1
+A = A[::-1]
+print(A)
+X = int(input('Введите число: '))
+# Решение задачи
+B = {}
+for i in range(len(A)):
+    if A[i] != X:
+        B[abs(X-A[i])] = i
+print(A[B[min(B.keys())]])
