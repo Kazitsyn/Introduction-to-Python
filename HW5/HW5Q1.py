@@ -5,4 +5,4 @@ def pow(a,b):
         return 1
     return a * pow(a, b-1)
 
-print(pow(2, 3))
+print(pow(int(input('введите число: ')), int(input('введите степень: '))))
