@@ -5,3 +5,20 @@
 # которую необходимо посчитать. Вводится список
 # чисел. Все числа списка находятся на разных
 # строках.
+
+# n = int(input("введите разммерность 1 массива: "))
+# lst = []
+# for i in range(n):
+#     lst.append(int(input(f"элемент {i + 1}: ")))
+# print(lst)
+
+def func(lst: list) -> int:
+    el, *lst = lst  # el = lst[0], lst = [1:]
+    if lst:
+        return func(lst) + lst.count(el)
+
+    return 0
+
+
+if __name__ == '__main__':
+    print(func([1, 2, 3, 2, 3]))
