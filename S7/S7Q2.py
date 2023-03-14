@@ -8,14 +8,18 @@
 функция, которая принимает объект и вычисляет его
 характеристику.
 """
-def same_by(func, values):
-    for i in range(1, len(values)):
-        if func(values[i]) != func(values[i - 1]):
-            return False
-    return True
+# def same_by(func, values):
+#     for i in range(1, len(values)):
+#         if func(values[i]) != func(values[i - 1]):
+#             return False
+#     return True
 
-values = [0, 2, 10, 6] 
-if same_by(lambda x: x % 2, values):
-    print("same")
-else:
-    print("different")
+# values = [0, 2, 10, 6] 
+# if same_by(lambda x: x % 2, values):
+#     print("same")
+# else:
+#     print("different")
+
+a = {1,2,3,4}
+b = {1,2,3,4,5}
+print(len(a-b))
