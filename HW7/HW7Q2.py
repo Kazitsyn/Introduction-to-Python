@@ -7,7 +7,14 @@
 """
 
 def print_operation_table(operation, num_rows=6, num_columns=6):
+    row = [] 
+    matrix = [row]
+    for i in range(1, num_rows + 1):
+        for j in range(1, num_columns + 1):
+            row.append(operation(i,j))
+    for row in matrix:
+        print(' '.join(list(map(str, row))))
 
-    pass
+    
 
 print_operation_table(lambda x, y: x * y)
